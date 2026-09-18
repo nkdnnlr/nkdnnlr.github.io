@@ -29,7 +29,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0.2'
+          bundler: '2.3.25'
           bundler-cache: true
+          cache-version: 1
 
       - name: Install deps
         run: |
