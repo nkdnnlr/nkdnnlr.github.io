@@ -26,7 +26,7 @@
   year={2021},
   publisher={Elsevier},
   preview={defect.png},
-  selected={true},
+  selected={false},
   html={https://www.sciencedirect.com/science/article/abs/pii/S0968432821000603},
   abstract={Controlling crystalline material defects is crucial, as they affect properties of the material that may be detrimental or beneficial for the final performance of a device. Defect analysis on the sub-nanometer scale is enabled by high-resolution scanning transmission electron microscopy (HRSTEM), where the identification of defects is currently carried out based on human expertise. However, the process is tedious, highly time consuming and, in some cases, yields ambiguous results. Here we propose a semi-supervised machine learning method that assists in the detection of lattice defects from atomic resolution HRSTEM images. It involves a convolutional neural network that classifies image patches as defective or non-defective, a graph-based heuristic that chooses one non-defective patch as a model, and finally an automatically generated convolutional filter bank, which highlights symmetry breaking such as stacking faults, twin defects and grain boundaries. Additionally, we suggest a variance filter to segment amorphous regions and beam defects. The algorithm is tested on III–V/Si crystalline materials and successfully evaluated against different metrics and a baseline approach, showing promising results even for extremely small training data sets and for noise compromised images. By combining the data-driven classification generality, robustness and speed of deep learning with the effectiveness of image filters in segmenting faulty symmetry arrangements, we provide a valuable open-source tool to the microscopist community that can streamline future HRSTEM analyses of crystalline materials.},
 }
@@ -39,7 +39,7 @@
   year={2021},
   organization={IEEE},
   preview={vibration.png},
-  selected={true},
+  selected={false},
   html={https://ieeexplore.ieee.org/document/9458403},
   abstract={Vibration patterns yield valuable information about the health state of a running machine, which is commonly exploited in predictive maintenance tasks for large industrial systems. However, the overhead, in terms of size, complexity and power budget, required by classical methods to exploit this information is often prohibitive for smaller-scale applications such as autonomous cars, drones or robotics. Here we propose a neuromorphic approach to perform vibration analysis using spiking neural networks that can be applied to a wide range of scenarios. We present a spike-based end-To-end pipeline able to detect system anomalies from vibration data, using building blocks that are compatible with analog-digital neuromorphic circuits. This pipeline operates in an online unsupervised fashion, and relies on a cochlea model, on feedback adaptation and on a balanced spiking neural network. We show that the proposed method achieves state-of-The-Art performance or better against two publicly available data sets. Further, we demonstrate a working proof-of-concept implemented on an asynchronous neuromorphic processor device. This work represents a significant step towards the design and implementation of autonomous lowpower edge-computing devices for online vibration monitoring.},
 }
@@ -75,6 +75,7 @@
   selected={true},
   html={https://www.sciencedirect.com/science/article/pii/S0925400522003100},
   abstract={Metal oxide (MOx) electro-chemical gas sensors are a sensible choice for many applications, due to their tunable sensitivity, their space-efficiency and their low price. Publicly available sensor datasets streamline the development and evaluation of novel algorithm and circuit designs, making them particularly valuable for the Artificial Olfaction / Mobile Robot Olfaction community. In 2013, Vergara et al. published a dataset comprising 16 months of recordings from a large MOx gas sensor array in a wind tunnel, which has since become a standard benchmark in the field. Here we report a previously undetected property of the dataset that limits its suitability for gas classification studies. The analysis of individual measurement timestamps reveals that gases were recorded in temporally clustered batches. The consequential correlation between the sensor response before gas exposure and the time of recording is often sufficient to predict the gas used in a given trial. Even if compensated by zero-offset-subtraction, residual short-term drift contains enough information for gas classification. We have identified a minimally drift-affected subset of the data, which is suitable for gas classification benchmarking after zero-offset-subtraction, although gas classification performance was substantially lower than for the full dataset. We conclude that previous studies conducted with this dataset very likely overestimate the accuracy of gas classification results. For the 17 potentially affected publications, we urge the authors to re-evaluate the results in light of our findings. Our observations emphasize the need to thoroughly document gas sensing datasets, and proper validation before using them for the development of algorithms.},
+  selected_order={4}
 }
 
 @article{milde2022neuromorphic,
@@ -111,5 +112,174 @@
   abstract={A café, the metro, a supermarket, a book store \textemdash \, many locations of everyday life have a specific smell. Recognising such olfactory scenes could inform personal activity tracking, environmental monitoring, and assist robotic navigation. Yet it is unclear if current Metal-oxide (MOx) sensor technology is sensitive and specific enough to achieve this. Factors like sensor drift, and sensitivity to ambient humidity and temperature further complicate the recognition of olfactory scenes. Hotplate temperature modulation has been suggested as a method to counter these drawbacks. We present an electronic nose based on MEMS-MOx sensors that support rapid hotplate temperature modulation with a 150 ms period. We recorded different natural olfactory scenes in an urban context. A linear SVM was able to recognise four olfactory scenes in single hotplate cycles with near-perfect performance when trained and tested on the same day, and 73\% accuracy when tested in the same locations on the next day. Gas sensor responses yielded higher recognition accuracy than humidity, temperature, and pressure, which were also partly-location specific. Our results indicate that hotplate modulation enables recognition of natural odor scenes across extended timespans. These findings encourage the use of MOx-sensors as rapid sensing devices in natural, uncontrolled environments.},
 }
 
+@article{choi2018pressure,
+  abbr={Phys. Rev. B},
+  title={Pressure-induced rotational symmetry breaking in {URu$_2$Si$_2$}},
+  author={Choi, J. and Ivashko, O. and Dennler, Nik and Aoki, D. and von Arx, K. and Gerber, S. and Gutowski, O. and Fischer, M. H. and Strempfer, J. and von Zimmermann, M. and Chang, J.},
+  journal={Physical Review B},
+  volume={98},
+  number={24},
+  pages={241113},
+  year={2018},
+  doi={10.1103/PhysRevB.98.241113},
+  html={https://doi.org/10.1103/PhysRevB.98.241113}
+}
 
+@article{matt2019ironselenide,
+  abbr={arXiv},
+  title={Iron-Selenide Phenomenology in Superconducting {Pr$_4$Fe$_2$As$_2$Te$_{0.88}$O$_4$}},
+  author={Matt, Christian E. and Ivashko, O. and Horio, M. and Sutter, D. and Dennler, Nik and Choi, J. and Wang, Q. and Fischer, M. H. and Katrych, S. and Forr{\'o}, L. and Ma, J. and Fu, B. and Lv, B. and von Zimmermann, M. and Kim, T. K. and Plumb, N. C. and Xu, N. and Shi, M. and Chang, J.},
+  journal={arXiv preprint arXiv:1910.01639},
+  year={2019},
+  arxiv={1910.01639},
+  html={https://arxiv.org/abs/1910.01639}
+}
 
+@inproceedings{rastogi2023spiketime,
+  abbr={BioCAS},
+  title={Spike-time encoding of gas concentrations using neuromorphic analog sensory front-end},
+  author={Rastogi, Shavika and Dennler, Nik and Schmuker, Michael and van Schaik, Andr{\'e}},
+  booktitle={2023 IEEE Biomedical Circuits and Systems Conference (BioCAS)},
+  pages={1--5},
+  year={2023},
+  doi={10.1109/BioCAS58349.2023.10388752},
+  html={https://doi.org/10.1109/BioCAS58349.2023.10388752}
+}
+
+@article{monk2024electrical,
+  abbr={Neural Comput.},
+  title={Electrical Signaling Beyond Neurons},
+  author={Monk, Travis and Dennler, Nik and Ralph, Nicholas Owen and Rastogi, Shavika and Afshar, Saeed and Urbizagastegui, Pablo and Jarvis, Russell and van Schaik, Andr{\'e} and Adamatzky, Andrew},
+  journal={Neural Computation},
+  volume={36},
+  number={10},
+  pages={1939--2029},
+  year={2024},
+  doi={10.1162/neco_a_01696},
+  html={https://doi.org/10.1162/neco_a_01696}
+}
+
+@inproceedings{mehrabi2024tinysnn,
+  abbr={ISIE},
+  title={Real-Time Anomaly Detection Using Hardware-based Unsupervised Spiking Neural Network ({TinySNN})},
+  author={Mehrabi, Mohamad Ali and Dennler, Nik and Bethi, Yeshwanth and van Schaik, Andr{\'e} and Afshar, Saeed},
+  booktitle={2024 IEEE 33rd International Symposium on Industrial Electronics (ISIE)},
+  pages={1--8},
+  year={2024},
+  doi={10.1109/ISIE54533.2024.10595773},
+  html={https://doi.org/10.1109/ISIE54533.2024.10595773}
+}
+
+@article{ralph2024active,
+  abbr={TechRxiv},
+  title={Active Neuromorphic Space Imaging and Focusing using Liquid Lenses},
+  author={Ralph, Nicholas Owen and Maybour, Darren and Marcireau, Alexandre and Dennler, Nik and Arja, Sami and Kruger, Nimrod and Cohen, Gregory},
+  journal={TechRxiv},
+  year={2024},
+  doi={10.36227/techrxiv.173152542.28624013/v1},
+  html={https://doi.org/10.36227/techrxiv.173152542.28624013/v1}
+}
+
+@article{dennler2024highspeed,
+  abbr={Sci. Adv.},
+  title={High-speed odor sensing using miniaturized electronic nose},
+  author={Dennler, Nik and Drix, Damien and Warner, Tom P. A. and Rastogi, Shavika and Della Casa, Cecilia and Ackels, Tobias and Schaefer, Andreas T. and van Schaik, Andr{\'e} and Schmuker, Michael},
+  journal={Science Advances},
+  volume={10},
+  number={45},
+  pages={eadp1764},
+  year={2024},
+  doi={10.1126/sciadv.adp1764},
+  html={https://www.science.org/doi/10.1126/sciadv.adp1764},
+  selected={true},
+  selected_order={1}
+}
+
+@article{dennler2024limitations,
+  abbr={Nat. Mach. Intell.},
+  title={Limitations in odour recognition and generalization in a neuromorphic olfactory circuit},
+  author={Dennler, Nik and van Schaik, Andr{\'e} and Schmuker, Michael},
+  journal={Nature Machine Intelligence},
+  volume={6},
+  pages={1451--1453},
+  year={2024},
+  doi={10.1038/s42256-024-00952-1},
+  html={https://www.nature.com/articles/s42256-024-00952-1},
+  selected={true},
+  selected_order={2}
+}
+
+@article{chen2025neurosa,
+  abbr={Nat. Commun.},
+  title={ON-OFF neuromorphic ISING machines using Fowler-Nordheim annealers},
+  author={Chen, Zihao and Xiao, Zhili and Akl, Mahmoud and Leugering, Johannes and Olajide, Omowuyi and Malik, Adil and Dennler, Nik and Harper, Chad and Bose, Subhankar and Gonzalez, Hector A. and Samaali, Mohamed and Liu, Gengting and Eshraghian, Jason and Pignari, Riccardo and Urgese, Gianvito and Andreou, Andreas G. and Shankar, Sadasivan and Mayr, Christian and Cauwenberghs, Gert and Chakrabartty, Shantanu},
+  journal={Nature Communications},
+  volume={16},
+  pages={3086},
+  year={2025},
+  doi={10.1038/s41467-025-58231-5},
+  html={https://doi.org/10.1038/s41467-025-58231-5}
+}
+
+@article{dennler2025neuromorphic,
+  abbr={NCE},
+  title={Neuromorphic principles for machine olfaction},
+  author={Dennler, Nik and True, Aaron and van Schaik, Andr{\'e} and Schmuker, Michael},
+  journal={Neuromorphic Computing and Engineering},
+  volume={5},
+  number={2},
+  pages={023001},
+  year={2025},
+  doi={10.1088/2634-4386/add0dc},
+  html={https://doi.org/10.1088/2634-4386/add0dc},
+  selected={true},
+  selected_order={3}
+}
+
+@article{rastogi2025enose,
+  abbr={IEEE Sens. J.},
+  title={A Neuromorphic Electronic Nose Design},
+  author={Rastogi, Shavika and Dennler, Nik and Schmuker, Michael and van Schaik, Andr{\'e}},
+  journal={IEEE Sensors Journal},
+  volume={25},
+  number={12},
+  pages={23135--23143},
+  year={2025},
+  doi={10.1109/JSEN.2025.3566409},
+  html={https://doi.org/10.1109/JSEN.2025.3566409}
+}
+
+@article{rastogi2025temporal,
+  abbr={IEEE Sens. J.},
+  title={Neuromorphic Circuit for Temporal Odor Encoding in Turbulent Environments},
+  author={Rastogi, Shavika and Dennler, Nik and Schmuker, Michael and van Schaik, Andr{\'e}},
+  journal={IEEE Sensors Journal},
+  volume={25},
+  number={18},
+  pages={35622--35630},
+  year={2025},
+  doi={10.1109/JSEN.2025.3596564},
+  html={https://doi.org/10.1109/JSEN.2025.3596564}
+}
+
+@article{france2025olfaction,
+  abbr={arXiv},
+  title={Position: Olfaction Standardization is Essential for the Advancement of Embodied Artificial Intelligence},
+  author={France, Kordel K. and Peddi, Rohith and Dennler, Nik and Daescu, Ovidiu},
+  journal={arXiv preprint arXiv:2506.00398},
+  year={2025},
+  arxiv={2506.00398},
+  html={https://arxiv.org/abs/2506.00398}
+}
+
+@article{dennler2026turbulent,
+  abbr={arXiv},
+  title={Odour sensing in turbulent plumes with high-speed electronic nose and non-invasive ground truth},
+  author={Dennler, Nik and Stark, Elle and Collaku, Saimon and Larson, Lars and van Schaik, Andr{\'e} and Schmuker, Michael and Crimaldi, John and G{\"u}ntner, Andreas T. and True, Aaron},
+  journal={arXiv preprint arXiv:2604.19626},
+  year={2026},
+  arxiv={2604.19626},
+  html={https://arxiv.org/abs/2604.19626},
+  selected={true},
+  selected_order={5}
+}

@@ -358,9 +358,7 @@ mdb:
 medium_zoom:
   version: "1.0.6"
   integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
-contact_note: |
-  Human-centered Sensing Laboratory
-  Dept. Mechanical and Process Engineering, ETH Zurich
-  Tannenstr. 3, CLA G 11.1
-  8092 Zürich, Switzerland
-  <a href="mailto:dennlern@ethz.ch">dennlern@ethz.ch</a>
+contact_note: "Human-centered Sensing Laboratory<br>
+Dept. Mechanical and Process Engineering, ETH Zurich<br>
+Tannenstr. 3, CLA G 11.1<br>
+8092 Zürich, Switzerland<br><a href="mailto:dennlern@ethz.ch">dennlern@ethz.ch</a>"

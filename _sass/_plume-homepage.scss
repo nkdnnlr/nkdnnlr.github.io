@@ -1,0 +1,205 @@
+/* Homepage-only interactive plume. Full-bleed field, centered site content. */
+.plume-homepage .plume-hero {
+  --plume-tail: 160px;
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-bottom: 2.25rem;
+  isolation: isolate;
+  /* Let the non-interactive tail drift beneath the beginning of the page below. */
+  overflow: visible;
+  min-height: 360px;
+  padding: 1.25rem 0 2.5rem;
+}
+
+/*
+ * The fluid field spans the viewport, while the academic content remains in
+ * the same centered column as the rest of the site. 800px matches the current
+ * al-folio container used by this site; the 30px gutter mirrors Bootstrap's
+ * normal 15px left/right container padding.
+ */
+.plume-homepage .plume-hero__content {
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 30px);
+  max-width: 800px;
+  min-height: 300px;
+  margin: 0 auto;
+}
+
+.plume-homepage .plume-hero__canvas {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: calc(-1 * var(--plume-tail));
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+  /*
+   * Keep the plume fully legible through the intro, then let it dissolve into
+   * the whitespace / first content below. The extra stops make the tail much
+   * subtler than a simple linear fade.
+   */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 7%,
+    #000 56%,
+    rgba(0, 0, 0, 0.78) 65%,
+    rgba(0, 0, 0, 0.30) 79%,
+    rgba(0, 0, 0, 0.09) 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 7%,
+    #000 56%,
+    rgba(0, 0, 0, 0.78) 65%,
+    rgba(0, 0, 0, 0.30) 79%,
+    rgba(0, 0, 0, 0.09) 90%,
+    transparent 100%
+  );
+  transition: opacity 240ms ease;
+}
+
+/* Soft lateral attenuation prevents a hard-looking plume edge at huge screens. */
+.plume-homepage .plume-hero::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: calc(-1 * var(--plume-tail));
+  left: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    var(--global-bg-color) 0%,
+    transparent 3.5%,
+    transparent 96.5%,
+    var(--global-bg-color) 100%
+  );
+  opacity: 0.28;
+}
+
+.plume-homepage .plume-hero.plume-ready {
+  touch-action: pan-y;
+}
+
+@media (min-width: 800px) {
+  .plume-homepage .plume-hero__hint {
+    left: calc(50% - 385px);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .plume-homepage .plume-hero.plume-ready {
+    cursor: crosshair;
+  }
+  .plume-homepage .plume-hero.plume-ready a,
+  .plume-homepage .plume-hero.plume-ready button,
+  .plume-homepage .plume-hero.plume-ready [role='button'],
+  .plume-homepage .plume-hero.plume-ready figure,
+  .plume-homepage .plume-hero.plume-ready img {
+    cursor: pointer;
+  }
+}
+
+/* Keep normal page interactions above the canvas. */
+.plume-homepage .plume-hero__content a,
+.plume-homepage .plume-hero__content button,
+.plume-homepage .plume-hero__content .profile,
+.plume-homepage .plume-hero__content figure,
+.plume-homepage .plume-hero__content img {
+  position: relative;
+  z-index: 3;
+}
+
+/* A deliberately quiet easter-egg hint; it disappears after the first use. */
+.plume-homepage .plume-hero__hint {
+  position: absolute;
+  z-index: 4;
+  left: 15px;
+  bottom: 0.75rem;
+  width: calc(100% - 30px);
+  max-width: 770px;
+  color: var(--global-text-color-light);
+  font-size: 0.68rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.035em;
+  text-transform: lowercase;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease 850ms;
+}
+
+.plume-homepage .plume-hero.plume-ready .plume-hero__hint {
+  opacity: 0.42;
+}
+
+.plume-homepage .plume-hero.plume-interacted .plume-hero__hint {
+  opacity: 0;
+  transition-delay: 0ms;
+  transition-duration: 220ms;
+}
+
+.plume-homepage .plume-hint-mobile {
+  display: none;
+}
+
+.plume-homepage .plume-hero.plume-error .plume-hero__canvas,
+.plume-homepage .plume-hero.plume-unavailable .plume-hero__canvas,
+.plume-homepage .plume-hero.plume-reduced-motion .plume-hero__canvas,
+.plume-homepage .plume-hero.plume-error .plume-hero__hint,
+.plume-homepage .plume-hero.plume-unavailable .plume-hero__hint,
+.plume-homepage .plume-hero.plume-reduced-motion .plume-hero__hint {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The real page remains above the decorative tail. */
+.plume-homepage .plume-homepage__below {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 575.98px) {
+  .plume-homepage .plume-hero {
+    --plume-tail: 105px;
+    min-height: 470px;
+    padding-top: 1.1rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .plume-homepage .plume-hero__content {
+    width: calc(100% - 30px);
+  }
+
+  .plume-homepage .plume-hero__hint {
+    left: 15px;
+    max-width: calc(100% - 30px);
+    bottom: 0.65rem;
+  }
+
+  .plume-homepage .plume-hint-desktop {
+    display: none;
+  }
+
+  .plume-homepage .plume-hint-mobile {
+    display: inline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plume-homepage .plume-hero__canvas,
+  .plume-homepage .plume-hero__hint {
+    transition: none;
+  }
+}
