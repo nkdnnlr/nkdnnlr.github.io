@@ -31,8 +31,8 @@ const CONFIG = Object.freeze({
   turbulence: readConfig('turbulence', 1.15),
   diffusion: readConfig('diffusion', 0.0025),
   sourceStrength: readConfig('sourceStrength', 1.55),
-  opacityLight: readConfig('opacityLight', 0.2),
-  opacityDark: readConfig('opacityDark', 0.28),
+  opacityLight: readConfig('opacityLight', 0.4),
+  opacityDark: readConfig('opacityDark', 0.38),
 });
 
 const gl = canvas.getContext('webgl2', {
