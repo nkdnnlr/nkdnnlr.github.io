@@ -208,9 +208,8 @@ defaults:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
+  compress_javascript: false
   exclude: ['robots.txt']
-  uglifier_args:
-    harmony: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives

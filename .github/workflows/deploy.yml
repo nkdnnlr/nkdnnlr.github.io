@@ -33,6 +33,11 @@ jobs:
           bundler-cache: true
           cache-version: 1
 
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
       - name: Install deps
         run: |
           npm install -g mermaid.cli
