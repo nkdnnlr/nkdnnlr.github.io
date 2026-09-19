@@ -208,3 +208,8 @@
 .post .profile {
   margin-top: -65px;
 }
+
+// Adjust the height of the news table
+.news .table-responsive {
+  max-height: 280px !important;
+}
