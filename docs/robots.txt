@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://nkdnnlr.github.io/sitemap.xml
